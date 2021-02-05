@@ -41,6 +41,7 @@ if exist "%profiles%\%%u\AppData\Local\Temp" cd "%profiles%\%%u\AppData\Local\Te
 if exist "%profiles%\%%u\AppData\Local\Temp" del *.* /F /S /Q /A: R /A: H /A: A
 if exist "%profiles%\%%u\AppData\Local\Temp" rmdir /s /q "%profiles%\%%u\AppData\Local\Temp"
 
+
 cls
 title Deletando %%u Temporary Internet Files. . .
 if exist "%profiles%\%%u\Local Settings\Temporary Internet Files" echo Deletando....
@@ -126,6 +127,20 @@ if exist "%profiles%\%%u\AppData\Local\Vivaldi\User Data\Default\Cache" echo Del
 if exist "%profiles%\%%u\AppData\Local\Vivaldi\User Data\Default\Cache" cd "%profiles%\%%u\AppData\Local\Vivaldi\User Data\Default\Cache"
 if exist "%profiles%\%%u\AppData\Local\Vivaldi\User Data\Default\Cache" del *.* /F /S /Q /A: R /A: H /A: A
 if exist "%profiles%\%%u\AppData\Local\Vivaldi\User Data\Default\Cache" rmdir /s /q "%profiles%\%%u\AppData\Local\Vivaldi\User Data\Default\Cache"
+
+cls
+title Deletando %%u Recent Files. . .
+if exist "%profiles%\%%u\Recent" echo Deletando....
+if exist "%profiles%\%%u\Recent" cd "%profiles%\%%u\Recent"
+if exist "%profiles%\%%u\Recent" del *.* /F /S /Q /A: R /A: H /A: A
+if exist "%profiles%\%%u\Recent" rmdir /s /q "%profiles%\%%u\Recent"
+
+cls
+title Deletando %%u Prefetch Files. . .
+if exist "%profiles%\%%u\Prefetch" echo Deletando....
+if exist "%profiles%\%%u\Prefetch" cd "%profiles%\%%u\Prefetch"
+if exist "%profiles%\%%u\Prefetch" del *.* /F /S /Q /A: R /A: H /A: A
+if exist "%profiles%\%%u\Prefetch" rmdir /s /q "%profiles%\%%u\Prefetch"
 
 )
 
